@@ -1,6 +1,10 @@
 # 👋 Caroline Maguire
 
-Hi! I'm Caroline Maguire — a technical writer and product specialist based in Cork, Ireland. I have experience documenting complex systems, creating user-focused content, and contributing to embedded software tools like CodeFusion Studio. I also hold an MSc in Software Design with Artificial Intelligence.
+Hi! I'm Caroline Maguire — a technical writer and product specialist based in Cork, Ireland. 
+
+I write and maintain the documentation for [CodeFusion Studio](https://developer.analog.com/docs/codefusion-studio/latest/user-guide), Analog Devices' open-source embedded development platform — authored in a docs-as-code workflow and merged upstream in [analogdevicesinc/codefusion-studio](https://github.com/analogdevicesinc/codefusion-studio).
+
+I have over nine years experience documenting developer tools, APIs, and SaaS platforms, with a focus on clear, user-oriented content. I hold an MSc in Software Design with Artificial Intelligence, and I use AI tools like Claude Code daily in my documentation workflow. Always interested in how other technical writers are using AI to optimise their work — feel free to reach out!
 
 ---
 

@@ -3,12 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Caroline Maguire – CV</title>
+  <title>Caroline Maguire – Senior Technical Writer – CV</title>
+  <meta name="author" content="Caroline Maguire">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    /*
+      Single-column layout so applicant tracking systems and AI screeners read the
+      content in order. No icon fonts (they extract as garbage characters) and no
+      text on coloured backgrounds. Navy and gold match the portfolio site.
+    */
+    @page {
+      size: A4;
+      margin: 11mm 14mm;
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -16,446 +26,269 @@
     }
 
     body {
-      font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #0A2749;
+      font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+      font-size: 9.5pt;
+      line-height: 1.38;
+      color: #222;
       background: #f0f0f0;
-      line-height: 1.6;
     }
 
-    .cv-container {
-      display: flex;
-      max-width: 1100px;
-      margin: 30px auto;
+    .cv {
+      max-width: 210mm;
+      margin: 24px auto;
+      padding: 11mm 14mm;
+      background: #fff;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-      background: linear-gradient(to right, #B59D69 35%, #fff 35%);
     }
 
-    /* ── Left sidebar ── */
-    .sidebar {
-      width: 35%;
-      background: #B59D69;
-      color: #fff;
-      padding: 40px 30px;
+    a {
+      color: #0A2749;
+      text-decoration: none;
     }
 
-    .sidebar h1 {
-      font-size: 1.7rem;
-      font-weight: 700;
-      margin-bottom: 4px;
-    }
-
-    .sidebar .title {
-      font-size: 1rem;
-      font-weight: 300;
-      margin-bottom: 20px;
-      opacity: 0.9;
-    }
-
-    .contact-box {
-      background: rgba(255, 255, 255, 0.12);
-      border-radius: 8px;
-      padding: 14px 16px;
-    }
-
-    .contact-box p {
-      font-size: 0.88rem;
+    /* ── Header ── */
+    header {
+      border-bottom: 3px solid #B59D69;
+      padding-bottom: 8px;
       margin-bottom: 10px;
     }
 
-    .contact-box p:last-child {
-      margin-bottom: 0;
-    }
-
-    .contact-box a {
-      color: #fff;
-      text-decoration: underline;
-      word-break: break-all;
-    }
-
-    .sidebar .divider {
-      border: none;
-      border-top: 1px solid rgba(255, 255, 255, 0.35);
-      margin: 30px 0;
-    }
-
-    .sidebar h2 {
-      font-size: 1.15rem;
-      font-weight: 700;
-      margin-bottom: 14px;
-    }
-
-    .portfolio-item {
-      margin-bottom: 20px;
-    }
-
-    .portfolio-item .portfolio-title {
-      font-size: 0.88rem;
-      font-weight: 600;
-    }
-
-    .portfolio-item .portfolio-desc {
-      font-size: 0.82rem;
-      opacity: 0.85;
-      margin-bottom: 2px;
-    }
-
-    .portfolio-item a {
-      color: #fff;
-      font-size: 0.82rem;
-    }
-
-    .pdf-spacer {
-      padding-top: 40px;
-    }
-
-    .sidebar-page-break {
-      border: none;
-      border-top: 1px solid rgba(255, 255, 255, 0.35);
-      margin: 30px 0;
-      height: 0;
-    }
-
-    .skill-list {
-      list-style: none;
-    }
-
-    .skill-list li {
-      font-size: 0.88rem;
-      margin-bottom: 14px;
-      padding-left: 14px;
-      position: relative;
-    }
-
-    .skill-list li::before {
-      content: '•';
-      position: absolute;
-      left: 0;
-    }
-
-    /* ── Right main area ── */
-    .main {
-      width: 65%;
-      background: #fff;
-      padding: 40px 36px;
-    }
-
-    .main h2 {
-      font-size: 1.3rem;
+    h1 {
+      font-size: 21pt;
       font-weight: 700;
       color: #0A2749;
-      margin-bottom: 12px;
-      border-bottom: 2px solid #B59D69;
-      padding-bottom: 6px;
+      line-height: 1.15;
     }
 
-    .summary {
-      margin-bottom: 28px;
+    .headline {
+      font-size: 11pt;
+      font-weight: 600;
+      color: #8A7342;
+      margin-bottom: 6px;
     }
 
-    .summary p {
-      font-size: 0.92rem;
-      color: #444;
+    .contact {
+      font-size: 9pt;
+      color: #333;
     }
 
-    .section {
-      margin-bottom: 28px;
+    /* ── Sections ── */
+    section {
+      margin-bottom: 10px;
     }
 
+    h2 {
+      font-size: 11pt;
+      font-weight: 700;
+      color: #0A2749;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      border-bottom: 1px solid #B59D69;
+      padding-bottom: 2px;
+      margin-bottom: 6px;
+      break-after: avoid;
+    }
+
+    p + p {
+      margin-top: 4px;
+    }
+
+    /* ── Jobs ── */
     .job {
-      margin-bottom: 22px;
-    }
-
-    .job .date {
-      font-size: 0.82rem;
-      color: #888;
-      font-style: italic;
-      margin-bottom: 4px;
-    }
-
-    .job h3 {
-      font-size: 1.05rem;
-      color: #B59D69;
-      margin-bottom: 2px;
-    }
-
-    .job .company {
-      font-size: 0.92rem;
-      font-weight: 600;
-      color: #0A2749;
       margin-bottom: 8px;
     }
 
-    .job ul {
-      padding-left: 20px;
+    .job-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      break-after: avoid;
     }
 
-    .job ul li {
-      font-size: 0.88rem;
-      color: #444;
-      margin-bottom: 5px;
-    }
-
-    .job ul li strong {
+    h3 {
+      font-size: 10.5pt;
+      font-weight: 700;
       color: #0A2749;
     }
 
-    .edu-item {
-      margin-bottom: 20px;
+    .dates {
+      font-size: 9pt;
+      color: #444;
+      white-space: nowrap;
     }
 
-    .edu-item .date {
-      font-size: 0.82rem;
-      opacity: 0.75;
-      font-style: italic;
-    }
-
-    .edu-item h3 {
-      font-size: 0.88rem;
+    .company {
       font-weight: 600;
+      color: #8A7342;
+      margin-bottom: 3px;
+      break-after: avoid;
+    }
+
+    ul {
+      padding-left: 16px;
+    }
+
+    li {
       margin-bottom: 1px;
     }
 
-    .edu-item .institution {
-      font-size: 0.82rem;
-      opacity: 0.85;
+    li strong,
+    .skills strong {
+      color: #0A2749;
+    }
+
+    /* ── Skills, education, portfolio ── */
+    .skills li,
+    .education li,
+    .portfolio li {
+      break-inside: avoid;
     }
 
     @media print {
       body {
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
+        background: #fff;
       }
-      .cv-container {
-        box-shadow: none;
-      }
-      .job {
-        break-inside: avoid;
-      }
-      .sidebar-page-break {
-        break-before: page;
-        page-break-before: always;
-      }
-    }
 
-    @media (max-width: 768px) {
-      .cv-container {
-        flex-direction: column;
-      }
-      .sidebar, .main {
-        width: 100%;
+      .cv {
+        max-width: none;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
       }
     }
   </style>
 </head>
 <body>
-  <div class="cv-container">
+  <div class="cv">
 
-    <!-- ════ LEFT SIDEBAR ════ -->
-    <aside class="sidebar">
+    <header>
       <h1>Caroline Maguire</h1>
-      <p class="title">Senior Technical Writer</p>
+      <p class="headline">Senior Technical Writer</p>
+      <p class="contact">
+        Cork, Ireland ·
+        <a href="mailto:carolinemaymaguire@gmail.com">carolinemaymaguire@gmail.com</a> ·
+        <a href="https://www.linkedin.com/in/caroline-maguire/">linkedin.com/in/caroline-maguire</a> ·
+        <a href="https://github.com/carolinemaymaguirecmm">github.com/carolinemaymaguirecmm</a>
+      </p>
+      <p class="contact">
+        Portfolio: <a href="https://carolinemaymaguirecmm.github.io/carolinemaymaguirecmm/">carolinemaymaguirecmm.github.io/carolinemaymaguirecmm</a>
+      </p>
+    </header>
 
-      <hr class="divider">
+    <section>
+      <h2>Summary</h2>
+      <p>Senior technical writer with 9 years of experience documenting developer tools, APIs, and SaaS platforms. I own docs-as-code end to end: I write the content and maintain the infrastructure behind it, including GitHub Actions workflows that lint, build, test, and deploy documentation to GitHub Pages. I build AI automation that keeps documentation in step with the product, including a GitHub Agentic Workflow that opens documentation PRs when the code changes, Claude Code skills, and public Claude Code plugins. MSc in Software Design with Artificial Intelligence.</p>
+    </section>
 
-      <h2>Contact</h2>
-      <div class="contact-box">
-        <p><i class="fa-solid fa-location-dot"></i> Cork, Ireland</p>
-        <p><i class="fa-solid fa-envelope"></i> <a href="mailto:carolinemaymaguire@gmail.com">carolinemaymaguire@gmail.com</a></p>
-        <p><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/caroline-maguire/" target="_blank">linkedin.com/in/caroline-maguire</a></p>
-        <p><i class="fa-brands fa-github"></i> <a href="https://github.com/carolinemaymaguirecmm" target="_blank">github.com/carolinemaymaguirecmm</a></p>
-        <p><i class="fa-solid fa-globe"></i> <a href="https://carolinemaymaguirecmm.github.io/carolinemaymaguirecmm/" target="_blank">Portfolio site (Docusaurus)</a></p>
-      </div>
+    <section>
+      <h2>Work Experience</h2>
 
-      <hr class="divider">
-
-      <h2>Education</h2>
-
-      <div class="edu-item">
-        <p class="date">2025 – 2026</p>
-        <h3>Professional Diploma in UX Design</h3>
-        <p class="institution">UCD Professional Academy / UX Design Institute</p>
-      </div>
-
-      <div class="edu-item">
-        <p class="date">2023 – 2024</p>
-        <h3>MSc in Software Design with Artificial Intelligence</h3>
-        <p class="institution">Technological University of the Shannon, Athlone</p>
-      </div>
-
-      <div class="edu-item">
-        <p class="date">2016 – 2019</p>
-        <h3>Higher Diploma in Computer Science</h3>
-        <p class="institution">Atlantic Technological University, Sligo</p>
-      </div>
-
-      <div class="edu-item">
-        <p class="date">2013 – 2015</p>
-        <h3>MA Historical Archives</h3>
-        <p class="institution">Maynooth University</p>
-      </div>
-
-      <div class="edu-item">
-        <p class="date">2007 – 2011</p>
-        <h3>Doctor of Philosophy (Ph.D.)</h3>
-        <p class="institution">Mary Immaculate College, Limerick</p>
-      </div>
-
-      <div class="edu-item">
-        <p class="date">2003 – 2007</p>
-        <h3>BA History and English</h3>
-        <p class="institution">Mary Immaculate College, Limerick</p>
-      </div>
-
-      <div class="sidebar-page-break"></div>
-
-      <h2>Portfolio</h2>
-
-      <div class="portfolio-item">
-        <p class="portfolio-title">Analog Devices – CodeFusion Studio User Guide</p>
-        <p class="portfolio-desc">Developer-facing help content for embedded software tools.</p>
-        <a href="https://developer.analog.com/docs/codefusion-studio/latest/user-guide" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Documentation</a>
-      </div>
-
-      <div class="portfolio-item pdf-spacer">
-        <p class="portfolio-title">Analog Devices – CodeFusion Studio GitHub Repository</p>
-        <p class="portfolio-desc">Repository for CodeFusion Studio User Guide.</p>
-        <a href="https://github.com/analogdevicesinc/codefusion-studio" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Repository</a>
-      </div>
-
-      <div class="portfolio-item">
-        <p class="portfolio-title">Analog Devices – CFS Plugin GitHub Repository</p>
-        <p class="portfolio-desc">Open source plugins for embedded projects.</p>
-        <a href="https://github.com/analogdevicesinc/cfs-plugins" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Repository</a>
-      </div>
-
-      <div class="portfolio-item">
-        <p class="portfolio-title">Analog Devices – CFS Skills (Claude Code Plugin)</p>
-        <p class="portfolio-desc">Public Claude Code plugin for querying the documentation and running end-to-end CLI workflows.</p>
-        <a href="https://github.com/analogdevicesinc/codefusion-studio/tree/main/packages/cfs-skills" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Repository</a>
-      </div>
-
-      <div class="portfolio-item">
-        <p class="portfolio-title">Analog Devices – VS Code Marketplace</p>
-        <p class="portfolio-desc">Customer-facing documentation and videos.</p>
-        <a href="https://marketplace.visualstudio.com/items?itemName=AnalogDevices.cfs-ide" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Content</a>
-      </div>
-
-      <div class="portfolio-item">
-        <p class="portfolio-title">Oomnitza – User Guide</p>
-        <p class="portfolio-desc">User Guide for the Oomnitza SaaS asset management platform.</p>
-        <a href="https://oomnitza.zendesk.com/hc/en-us" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Documentation</a>
-      </div>
-<div> </div>
-      <div class="portfolio-item">
-        <p class="portfolio-title">Oomnitza – API GitHub Repository</p>
-        <p class="portfolio-desc">Oomnitza developer-facing integration documentation.</p>
-        <a href="https://github.com/Oomnitza/oomnitza-connector" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Repository</a>
-      </div>
-
-      <div class="portfolio-item">
-        <p class="portfolio-title">Johnson Controls – System Configuration Tool</p>
-        <p class="portfolio-desc">Help content, install guides, and release documentation for Metasys building automation software.</p>
-        <a href="https://docs.johnsoncontrols.com/bas/r/Metasys/en-US/SCT-System-Configuration-Tool-Help/17.0" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Documentation</a>
-      </div>
-
-      <div class="sidebar-page-break"></div>
-
-      <h2>Core Skills</h2>
-      <ul class="skill-list">
-        <li>Cross-functional Collaboration (Product, Engineering, UX)</li>
-        <li>AI Documentation Automation (GitHub Agentic Workflows, Claude Code skills &amp; plugins, GitHub Copilot, llms.txt, AEO)</li>
-        <li>Docs-as-Code &amp; CI (Markdown, Git, GitHub Actions, GitHub Pages, Docusaurus, MkDocs, YAML)</li>
-        <li>Developer &amp; API Documentation (REST, Postman, Swagger, cURL)</li>
-        <li>QA &amp; Pre-release Testing (AWS EC2, Docker, Jenkins, VMs, Linux, Windows)</li>
-        <li>Content Strategy &amp; Auditing</li>
-        <li>UX Writing &amp; Content Design (Figma)</li>
-        <li>Project Management (Jira, Confluence, Zendesk)</li>
-        <li>DITA/XML &amp; Structured Authoring (Oxygen, FrameMaker, MadCap Flare)</li>
-        <li>Programming (Python, C#, JavaScript, SQL, HTML/CSS)</li>
-      </ul>
-    </aside>
-
-    <!-- ════ RIGHT MAIN AREA ════ -->
-    <main class="main">
-
-      <div class="summary">
-        <h2>Summary</h2>
-        <p>Senior technical writer with 9 years of experience documenting developer tools, APIs, and SaaS platforms. Owns docs-as-code end to end: writing the content and maintaining the infrastructure behind it, including GitHub Actions workflows for linting, building, and deploying to GitHub Pages. Builds AI automation that keeps documentation in step with the product, including a GitHub Agentic Workflow that detects codebase changes and opens documentation PRs for review, Claude Code skills for style-guide checks, and publicly distributed Claude Code plugins. Strong technical background with an MSc in Software Design and Artificial Intelligence and hands-on experience testing pre-release builds with engineering teams. Currently pursuing a Professional Diploma in UX Design.</p>
-      </div>
-
-      <div class="section">
-        <h2>Work Experience</h2>
-
-        <div class="job">
-          <p class="date">2024-09 – Present</p>
+      <div class="job">
+        <div class="job-head">
           <h3>Senior Technical Writer – Embedded Developer Tools</h3>
-          <p class="company">Analog Devices</p>
-          <ul>
-            <li><strong>Technical Documentation:</strong> Owned developer-facing content for the open-source embedded tool CodeFusion Studio, including user guides, CLI workflows, API references, tutorials, release notes, and video content; authored 300+ pull requests.</li>
-            <li><strong>Docs Infrastructure &amp; CI:</strong> Built and maintain GitHub Actions workflows that automatically lint, build, test, and deploy every documentation build to GitHub Pages; produced and deployed multiple versioned documentation releases.</li>
-            <li><strong>Agentic Documentation Workflow:</strong> Built a GitHub Agentic Workflow (gh-aw) that detects codebase changes and opens PRs updating the documentation, release notes, and changelog for writer review.</li>
-            <li><strong>Claude Code Skills &amp; Plugins:</strong> Created repository Claude Code skills for style-guide checks and for scoping each release's documentation from Jira and Jama, and publicly distributed Claude Code marketplace plugins that let users query the documentation and run complete end-to-end command-line workflows.</li>
-            <li><strong>AI Discoverability:</strong> Implemented answer engine optimisation (AEO) for the documentation, including llms.txt and llms-full.txt, so AI assistants can find and accurately cite product content.</li>
-            <li><strong>Pre-release Testing &amp; Research:</strong> Independently researched technical concepts and product specifications; pulled and tested pre-release builds against documentation in virtual and local environments, ensuring accuracy and identifying issues before release.</li>
-            <li><strong>QA Partnership:</strong> Collaborated with the testing team each release to ensure documentation is accurate and ready to support their test plans.</li>
-            <li><strong>Team Collaboration:</strong> Worked daily with embedded software engineers and cross-functional product teams across Asia, Europe, and the US; gathered technical input directly from developers and authored documentation for a diverse global audience.</li>
-            <li><strong>User Validation:</strong> Conducted user validation with developers to ensure documentation supported real workflows and reduced onboarding friction.</li>
-            <li><strong>Sales and UX Content:</strong> Contributed to customer-facing content, including marketing copy, sales training content, and UX writing.</li>
-            <li><strong>AI-Assisted Reviews:</strong> Use Claude Code and GitHub Copilot for content development, code review, and PR reviews, improving quality and reducing turnaround time.</li>
-          </ul>
+          <span class="dates">Sep 2024 – Present</span>
         </div>
-
-        <div class="job">
-          <p class="date">2022-02 – 2024-08</p>
-          <h3>Technical Writer &amp; Product Owner – SaaS / API Integrations</h3>
-          <p class="company">Oomnitza</p>
-          <ul>
-            <li><strong>Documentation:</strong> Built out the complete product documentation suite from scratch, ensuring comprehensive coverage of all features. Created and managed HTML content using MadCap Flare, and managed open-source documentation on GitHub using Markdown in a docs-as-code workflow.</li>
-            <li><strong>APIs:</strong> Tested and documented APIs using tools such as Postman, Swagger, and cURL.</li>
-            <li><strong>Style Guide Implementation:</strong> Established and enforced documentation style guide standards.</li>
-            <li><strong>Product Design:</strong> Gathered requirements, designed features in Figma, and created supporting documentation for development and stakeholders.</li>
-            <li><strong>Product Release Leadership:</strong> Led a major product release by coordinating with cross-functional teams, including Senior Product Management, Support, Customer Success, and Engineering.</li>
-            <li><strong>Backlog &amp; Sprint Management:</strong> Managed the product backlog in Jira, facilitated sprint planning sessions, and prioritized user requirements to ensure timely delivery of features.</li>
-            <li><strong>UI/UX Input:</strong> Provided labeling and design suggestions for new features to enhance user experience and interface design.</li>
-            <li><strong>Troubleshooting:</strong> Reproduced software bugs in both Linux and Windows environments and documented workarounds.</li>
-            <li><strong>Portal Maintenance:</strong> Maintained and updated the publishing portal aesthetics using HTML, CSS, JavaScript, and Python.</li>
-            <li><strong>Support:</strong> Managed internal support and customer documentation requests through Zendesk.</li>
-          </ul>
-        </div>
-
-        <div class="job">
-          <p class="date">2020-03 – 2022-01</p>
-          <h3>Cloud Consultant – EDI Integration</h3>
-          <p class="company">OpenText</p>
-          <ul>
-            <li><strong>XML and EDI Development:</strong> Utilised mapping tools and developed C# applications to configure XML documents in compliance with EDI standards.</li>
-            <li><strong>Documentation Management:</strong> Created and maintained implementation instructions, help guides, project design documents, and technical specifications.</li>
-            <li><strong>Customer Support:</strong> Provided ongoing technical support to customers via ServiceNow.</li>
-            <li><strong>Web Development:</strong> Developed and customised customer SupplierWeb portals using HTML, CSS, JavaScript, and SQL.</li>
-            <li><strong>Protocol Configuration:</strong> Configured communication protocols such as OFTP, SFTP, AS2, and HTTP for secure data transmission.</li>
-            <li><strong>Version Control &amp; Project Management:</strong> Managed version control using Git and SVN, and coordinated project activities using Atlassian tools, including Jira (Agile methodologies) and Confluence for documentation.</li>
-          </ul>
-        </div>
-
-        <div class="job">
-          <p class="date">2017-08 – 2020-02</p>
-          <h3>Technical Writer – Configuration Tools for Embedded Devices</h3>
-          <p class="company">Johnson Controls</p>
-          <ul>
-            <li><strong>Metasys® Tools Lead Writer:</strong> Led content creation for Metasys® Tools, progressing from Graduate Technical Writer to Technical Writer III.</li>
-            <li><strong>Content Migration &amp; Process Improvement:</strong> Part of the DITA team responsible for migrating Tech Comms content to DITA/XML across the organisation, improving consistency and streamlining the publishing workflow.</li>
-            <li><strong>Documentation Tools:</strong> Created and managed DITA/XML content using Oxygen, XMetaL, FrameMaker, and Documentum, with version control through SVN and later Ixiasoft CMS.</li>
-            <li><strong>Publishing Portal Maintenance:</strong> Worked with the Web Team to maintain the Fluidtopics publishing portal, assisting in testing, maintenance, and updates using CSS, JavaScript, Python, and SQL.</li>
-            <li><strong>QA Testing:</strong> QA tested software builds and the content that surrounds it.</li>
-            <li><strong>DITA/XML Training:</strong> Delivered training on DITA/XML publishing; tested and troubleshot build and output errors.</li>
-            <li><strong>Peer Support:</strong> Provided peer reviews and support on technical writing tools such as Oxygen, Ixiasoft, Fluidtopics, and SVN.</li>
-            <li><strong>Jira Management:</strong> Developed and managed Jira user stories, ensuring all Definition of Done and Acceptance Criteria were met within sprint cycles.</li>
-            <li><strong>Team Coordination:</strong> Worked closely with international engineering and design teams in an Agile (Scrum and Kanban) environment.</li>
-          </ul>
-        </div>
+        <p class="company">Analog Devices</p>
+        <ul>
+          <li><strong>Technical documentation:</strong> Own developer-facing documentation for CodeFusion Studio, an open-source embedded development platform, including user guides, CLI workflows, API references, tutorials, release notes, and videos. Authored 300+ pull requests.</li>
+          <li><strong>Docs infrastructure and CI:</strong> Built and maintain GitHub Actions workflows that automatically lint, build, test, and deploy every documentation build to GitHub Pages. Publish multiple versioned documentation releases.</li>
+          <li><strong>Agentic documentation workflow:</strong> Built a GitHub Agentic Workflow (gh-aw) that detects codebase changes and opens PRs updating the documentation, release notes, and changelog for writer review.</li>
+          <li><strong>Claude Code skills and plugins:</strong> Created repository Claude Code skills for style-guide checks and for scoping each release's documentation from Jira and Jama. Publicly distribute Claude Code marketplace plugins that let users query the documentation and run complete end-to-end command-line workflows.</li>
+          <li><strong>AI discoverability:</strong> Implemented answer engine optimisation (AEO) for the documentation, including llms.txt and llms-full.txt, so AI assistants can find and accurately cite product content.</li>
+          <li><strong>Pre-release testing:</strong> Research product specifications and test pre-release builds against the documentation in virtual and local environments. Work with the QA team each release so documentation supports their test plans.</li>
+          <li><strong>Collaboration and user validation:</strong> Work daily with embedded software engineers and product teams across Asia, Europe, and the US. Run user validation with developers to confirm documentation supports real workflows and reduces onboarding friction.</li>
+          <li><strong>AI-assisted reviews:</strong> Use Claude Code and GitHub Copilot for drafting, code review, and PR review, improving quality and reducing turnaround time.</li>
+          <li><strong>Customer-facing content:</strong> Contribute marketing copy, sales training content, and UX writing.</li>
+        </ul>
       </div>
 
-    </main>
+      <div class="job">
+        <div class="job-head">
+          <h3>Technical Writer and Product Owner – SaaS / API Integrations</h3>
+          <span class="dates">Feb 2022 – Aug 2024</span>
+        </div>
+        <p class="company">Oomnitza</p>
+        <ul>
+          <li><strong>Documentation:</strong> Built the complete product documentation suite from scratch for a SaaS asset management platform, using MadCap Flare for HTML content and Markdown on GitHub in a docs-as-code workflow.</li>
+          <li><strong>APIs:</strong> Tested and documented REST APIs and integrations using Postman, Swagger, and cURL.</li>
+          <li><strong>Style guide:</strong> Established and enforced the documentation style guide.</li>
+          <li><strong>Product ownership:</strong> Gathered requirements, designed features and UI labels in Figma, managed the Jira backlog and sprint planning, and led a major product release across Product Management, Support, Customer Success, and Engineering.</li>
+          <li><strong>Troubleshooting and support:</strong> Reproduced bugs on Linux and Windows and documented workarounds. Handled internal and customer documentation requests through Zendesk.</li>
+          <li><strong>Portal maintenance:</strong> Maintained the documentation publishing portal using HTML, CSS, JavaScript, and Python.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <h3>Cloud Consultant – EDI Integration</h3>
+          <span class="dates">Mar 2020 – Jan 2022</span>
+        </div>
+        <p class="company">OpenText</p>
+        <ul>
+          <li><strong>Documentation:</strong> Created and maintained implementation guides, help content, design documents, and technical specifications.</li>
+          <li><strong>Development:</strong> Developed C# applications and used mapping tools to configure XML documents to EDI standards. Built and customised supplier web portals using HTML, CSS, JavaScript, and SQL.</li>
+          <li><strong>Configuration and support:</strong> Configured OFTP, SFTP, AS2, and HTTP for secure data transmission, and supported customers through ServiceNow.</li>
+          <li><strong>Process:</strong> Managed version control in Git and SVN, and ran Agile project work in Jira and Confluence.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <h3>Technical Writer – Configuration Tools for Embedded Devices</h3>
+          <span class="dates">Aug 2017 – Feb 2020</span>
+        </div>
+        <p class="company">Johnson Controls</p>
+        <ul>
+          <li><strong>Lead writer:</strong> Led help content, installation guides, and release documentation for Metasys Tools, including the System Configuration Tool for Metasys building automation software. Progressed from Graduate Technical Writer to Technical Writer III.</li>
+          <li><strong>DITA migration:</strong> Member of the team that migrated Tech Comms content to DITA/XML across the organisation, improving consistency and streamlining publishing.</li>
+          <li><strong>Structured authoring:</strong> Authored DITA/XML content in Oxygen, XMetaL, FrameMaker, and Documentum, with version control in SVN and later Ixiasoft CMS. Trained colleagues on DITA/XML publishing and troubleshot build and output errors.</li>
+          <li><strong>Publishing portal:</strong> Worked with the web team to test and maintain the Fluid Topics publishing portal using CSS, JavaScript, Python, and SQL.</li>
+          <li><strong>Agile delivery:</strong> QA tested software builds and their content, and wrote Jira user stories that met Definition of Done and Acceptance Criteria, working with international engineering and design teams in Scrum and Kanban.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li><strong>Docs-as-code and CI:</strong> Markdown, Git, GitHub, GitHub Actions, GitHub Pages, Docusaurus, MkDocs, YAML, Pandoc</li>
+        <li><strong>AI documentation automation:</strong> GitHub Agentic Workflows (gh-aw), Claude Code skills and plugins, GitHub Copilot, llms.txt, answer engine optimisation (AEO)</li>
+        <li><strong>Developer and API documentation:</strong> REST APIs, OpenAPI/Swagger, Postman, cURL, CLI documentation</li>
+        <li><strong>Testing and environments:</strong> Docker, AWS EC2, Jenkins, virtual machines, Linux, Windows</li>
+        <li><strong>Programming:</strong> Python, JavaScript, C#, SQL, HTML/CSS</li>
+        <li><strong>Structured authoring:</strong> DITA/XML, Oxygen XML Editor, FrameMaker, MadCap Flare</li>
+        <li><strong>Tools and process:</strong> Jira, Jama, Confluence, Zendesk, Figma, Agile (Scrum, Kanban)</li>
+        <li><strong>Content:</strong> Content strategy and audits, style guides, UX writing, cross-functional collaboration with product, engineering, and UX</li>
+      </ul>
+    </section>
+
+    <section class="education">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>Professional Diploma in UX Design</strong> – UCD Professional Academy / UX Design Institute, 2025 – 2026</li>
+        <li><strong>MSc in Software Design with Artificial Intelligence</strong> – Technological University of the Shannon, Athlone, 2023 – 2024</li>
+        <li><strong>Higher Diploma in Computer Science</strong> – Atlantic Technological University, Sligo, 2016 – 2019</li>
+        <li><strong>MA in Historical Archives</strong> – Maynooth University, 2013 – 2015</li>
+        <li><strong>PhD</strong> – Mary Immaculate College, Limerick, 2007 – 2011</li>
+        <li><strong>BA in History and English</strong> – Mary Immaculate College, Limerick, 2003 – 2007</li>
+      </ul>
+    </section>
+
+    <section class="portfolio">
+      <h2>Portfolio</h2>
+      <ul>
+        <li><strong>CodeFusion Studio User Guide</strong> (Analog Devices) – <a href="https://developer.analog.com/docs/codefusion-studio/latest/user-guide">developer.analog.com/docs/codefusion-studio</a></li>
+        <li><strong>CodeFusion Studio repository and CFS Skills plugin</strong> (Analog Devices) – <a href="https://github.com/analogdevicesinc/codefusion-studio">github.com/analogdevicesinc/codefusion-studio</a> (plugin: <a href="https://github.com/analogdevicesinc/codefusion-studio/tree/main/packages/cfs-skills">packages/cfs-skills</a>)</li>
+        <li><strong>CFS Plugins repository</strong> (Analog Devices) – <a href="https://github.com/analogdevicesinc/cfs-plugins">github.com/analogdevicesinc/cfs-plugins</a></li>
+        <li><strong>VS Code Marketplace listing</strong> (Analog Devices) – <a href="https://marketplace.visualstudio.com/items?itemName=AnalogDevices.cfs-ide">marketplace.visualstudio.com, AnalogDevices.cfs-ide</a></li>
+        <li><strong>Oomnitza User Guide</strong> – <a href="https://oomnitza.zendesk.com/hc/en-us">oomnitza.zendesk.com/hc/en-us</a></li>
+        <li><strong>Oomnitza Connector API repository</strong> – <a href="https://github.com/Oomnitza/oomnitza-connector">github.com/Oomnitza/oomnitza-connector</a></li>
+        <li><strong>Metasys System Configuration Tool Help</strong> (Johnson Controls) – <a href="https://docs.johnsoncontrols.com/bas/r/Metasys/en-US/SCT-System-Configuration-Tool-Help/17.0">docs.johnsoncontrols.com</a></li>
+        <li><strong>Portfolio site</strong>, built with Docusaurus, with CI link checks and a custom llms.txt plugin – <a href="https://carolinemaymaguirecmm.github.io/carolinemaymaguirecmm/">carolinemaymaguirecmm.github.io/carolinemaymaguirecmm</a></li>
+      </ul>
+    </section>
+
   </div>
 </body>
 </html>

@@ -1,8 +1,8 @@
 name: Generate Eisvogel styled PDF using pandoc and store in GitHub repo
 
+# Automatic runs are disabled: the PDF build has been failing, so the committed
+# deployment-guide.pdf is kept as is. Run manually from the Actions tab if needed.
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 jobs:

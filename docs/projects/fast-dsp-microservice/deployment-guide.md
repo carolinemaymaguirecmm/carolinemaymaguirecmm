@@ -24,8 +24,8 @@ Before you begin, make sure you have the following installed:
 Clone the GitHub project containing the Python, environment, and requirements files:
 
 ```bash
-git clone git@github.com:carolinemaymaguirecmm/about.git
-cd about/docs/projects/fast-dsp-microservice
+git clone git@github.com:carolinemaymaguirecmm/carolinemaymaguirecmm.git
+cd carolinemaymaguirecmm/docs/projects/fast-dsp-microservice
 ```
 
 ### Step 2: Set up and activate a virtual environment
@@ -158,8 +158,8 @@ sudo apt update && sudo apt install -y python3 python3-pip python3-venv git
 Clone the GitHub repository containing the project files:
 
 ```bash
-git clone https://github.com/carolinemaymaguirecmm/about.git
-cd about/docs/projects/fast-dsp-microservice
+git clone https://github.com/carolinemaymaguirecmm/carolinemaymaguirecmm.git
+cd carolinemaymaguirecmm/docs/projects/fast-dsp-microservice
 ```
 
 ### Step 6: Set up and run

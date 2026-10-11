@@ -1,6 +1,6 @@
 # Pandoc/Eisvogel settings for the deployment guide PDF.
 # Kept out of the Markdown front matter so Docusaurus can build the page.
-author: "Caroline Maguire \\newline \\href{https://github.com/carolinemaymaguirecmm/about}{github.com/carolinemaymaguirecmm}"
+author: "Caroline Maguire \\newline \\href{https://github.com/carolinemaymaguirecmm/carolinemaymaguirecmm}{github.com/carolinemaymaguirecmm}"
 date: "2025-06-29"
 subject: "Markdown"
 lang: "en"

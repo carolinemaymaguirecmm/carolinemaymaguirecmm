@@ -1,0 +1,21 @@
+# Caroline Maguire
+
+> Portfolio of Caroline Maguire, a senior technical writer in Cork, Ireland, specialising in developer tools, APIs, docs-as-code, and AI documentation automation.
+
+## Overview
+
+- [👋 Welcome](https://carolinemaymaguirecmm.github.io/carolinemaymaguirecmm/): I'm Caroline Maguire — a technical writer and product specialist focused on developer tools, embedded systems, and clear, user-focused documentation.
+
+## CV
+
+- [CV and writing samples](https://carolinemaymaguirecmm.github.io/carolinemaymaguirecmm/cv/): This section contains writing samples and project work relevant to technical writing and documentation.
+- [🎓 Academic Work](https://carolinemaymaguirecmm.github.io/carolinemaymaguirecmm/cv/academic-projects/): Below are selected academic projects submitted as part of my postgraduate studies:
+- [Writing Samples](https://carolinemaymaguirecmm.github.io/carolinemaymaguirecmm/cv/writing-samples/): These are selected examples of product documentation and user help content I've contributed to or maintained:
+- [CV (PDF)](https://carolinemaymaguirecmm.github.io/carolinemaymaguirecmm/cv/caroline-maguire-cv.pdf): Current CV as a PDF.
+- [CV (web page)](https://carolinemaymaguirecmm.github.io/carolinemaymaguirecmm/cv/caroline-maguire-cv.html): Current CV as HTML.
+
+## Projects
+
+- [Project focused work](https://carolinemaymaguirecmm.github.io/carolinemaymaguirecmm/projects/): This section includes hands-on technical projects, including:
+- [AI Masters Project](https://carolinemaymaguirecmm.github.io/carolinemaymaguirecmm/projects/ai-masters-project/): The following notebooks were completed as part of my MSc in Software Design with Artificial Intelligence. They explore data analysis and machine learning using real-world datasets.
+- [Deploy a FastAPI microservice to AWS EC2 using Uvicorn](https://carolinemaymaguirecmm.github.io/carolinemaymaguirecmm/projects/fast-dsp-microservice/deployment-guide/): This guide shows you how to deploy a FastAPI microservice to AWS EC2. The service fetches data from a third-party API, processes the response, and exposes it through a RESTful endpoint. While the API used in this example uses a free tidal data API, the same pattern can be applied to any data-driven API.

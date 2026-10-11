@@ -2,7 +2,7 @@
 
 This section contains writing samples and project work relevant to technical writing and documentation.
 
-- <a href="./resume/caroline-maguire-cv.pdf" target="_blank">CV</a>: My current CV.
+- [CV (PDF)](pathname:///cv/caroline-maguire-cv.pdf): My current CV. Also available as a [web page](pathname:///cv/caroline-maguire-cv.html).
 
 - [Academic projects](./academic-projects/academic-projects.md): Research undertaken as part of my postgraduate studies.
 

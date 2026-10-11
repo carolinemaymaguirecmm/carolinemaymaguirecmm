@@ -9,7 +9,7 @@ const path = require('path');
 
   await page.setViewport({ width: 1100, height: 800 });
 
-  const htmlPath = path.resolve(__dirname, 'docs/cv/resume/caroline-maguire-cv.html');
+  const htmlPath = path.resolve(__dirname, 'static/cv/caroline-maguire-cv.html');
   await page.goto(`file://${htmlPath}`, { waitUntil: 'networkidle0' });
 
   await page.emulateMediaType('screen');
@@ -25,10 +25,11 @@ const path = require('path');
       .sidebar { background: transparent; }
       .sidebar-page-break { display: none; }
       .portfolio-item { break-inside: avoid; page-break-inside: avoid; }
+      .job > .date, .job > h3, .job > .company { break-after: avoid; page-break-after: avoid; }
     `
   });
 
-  const outputPath = path.resolve(__dirname, 'docs/cv/resume/caroline-maguire-cv.pdf');
+  const outputPath = path.resolve(__dirname, 'static/cv/caroline-maguire-cv.pdf');
   await page.pdf({
     path: outputPath,
     format: 'A4',

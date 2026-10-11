@@ -1,26 +1,6 @@
 ---
 title: "Deploy a FastAPI microservice to AWS EC2 using Uvicorn"
-author: "Caroline Maguire \\newline \\href{https://github.com/carolinemaymaguirecmm/about}{github.com/carolinemaymaguirecmm}"
-date: "2025-06-29"
-subject: "Markdown"
 keywords: [FastAPI, EC2]
-lang: "en"
-titlepage: true
-titlepage-color: "3C9F53"
-titlepage-text-color: "FFFFFF"
-titlepage-rule-color: "FFFFFF"
-titlepage-rule-height: 2
-footer-right: "Page \\thepage"
-footer-left: "\\thetitle"
-header-left: "\\hspace{1cm}"
-header-center: "\\hspace{1cm}"
-header-right: "\\hspace{1cm}"
-colorlinks: true
-linkcolor: blue
-urlcolor: blue
-header-includes:
-  - \usepackage{graphicx}
-  - \setkeys{Gin}{width=0.7\linewidth, keepaspectratio}
 ---
 
 # Deploy a FastAPI microservice to AWS EC2 using Uvicorn
